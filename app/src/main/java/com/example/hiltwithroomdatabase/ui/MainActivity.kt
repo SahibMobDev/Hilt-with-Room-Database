@@ -1,7 +1,8 @@
-package com.example.hiltwithroomdatabase
+package com.example.hiltwithroomdatabase.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.hiltwithroomdatabase.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
