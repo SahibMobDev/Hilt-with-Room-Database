@@ -7,8 +7,10 @@ import com.example.hiltwithroomdatabase.R
 import com.example.hiltwithroomdatabase.databinding.ActivityAddNoteBinding
 import com.example.hiltwithroomdatabase.db.NoteEntity
 import com.example.hiltwithroomdatabase.repository.DbRepository
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class AddNoteActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityAddNoteBinding

@@ -10,9 +10,10 @@ import com.example.hiltwithroomdatabase.adapter.NoteAdapter
 import com.example.hiltwithroomdatabase.databinding.ActivityMainBinding
 import com.example.hiltwithroomdatabase.db.NoteEntity
 import com.example.hiltwithroomdatabase.repository.DbRepository
+import dagger.hilt.android.AndroidEntryPoint
 import java.io.LineNumberReader
 import javax.inject.Inject
-
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
