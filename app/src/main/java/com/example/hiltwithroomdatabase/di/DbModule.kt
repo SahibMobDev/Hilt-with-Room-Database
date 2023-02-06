@@ -3,6 +3,7 @@ package com.example.hiltwithroomdatabase.di
 import android.content.Context
 import androidx.room.Room
 import com.example.hiltwithroomdatabase.db.NoteDatabase
+import com.example.hiltwithroomdatabase.db.NoteEntity
 import com.example.hiltwithroomdatabase.utils.Constants.NOTE_DATABASE
 import dagger.Module
 import dagger.Provides
@@ -24,4 +25,11 @@ class DbModule {
         .allowMainThreadQueries()
         .fallbackToDestructiveMigration()
         .build()
+
+    @Provides
+    @Singleton
+    fun provideDao(db: NoteDatabase) = db.noteDao()
+
+    @Provides
+    fun provideEntity() = NoteEntity()
 }

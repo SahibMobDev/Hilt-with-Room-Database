@@ -10,7 +10,7 @@ data class NoteEntity (
     @PrimaryKey(autoGenerate = true)
     val noteId: Int = 0,
     @ColumnInfo("note_title")
-    val noteTitle: String,
+    val noteTitle: String = "",
     @ColumnInfo("note_desc")
-    val noteDesc: String
+    val noteDesc: String = ""
         )
