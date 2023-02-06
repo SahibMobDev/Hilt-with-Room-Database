@@ -7,6 +7,7 @@ import com.example.hiltwithroomdatabase.adapter.NoteAdapter
 import com.example.hiltwithroomdatabase.databinding.ActivityUpdateNoteBinding
 import com.example.hiltwithroomdatabase.db.NoteEntity
 import com.example.hiltwithroomdatabase.repository.DbRepository
+import com.example.hiltwithroomdatabase.utils.Constants.BUNDLE
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -30,7 +31,7 @@ class UpdateNoteActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         intent.extras?.let{
-            noteId = it.getInt("NOTE_ID")
+            noteId = it.getInt(BUNDLE)
         }
 
         binding.apply {

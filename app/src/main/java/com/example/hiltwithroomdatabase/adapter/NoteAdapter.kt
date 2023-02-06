@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hiltwithroomdatabase.databinding.ItemNoteBinding
 import com.example.hiltwithroomdatabase.db.NoteEntity
 import com.example.hiltwithroomdatabase.ui.UpdateNoteActivity
+import com.example.hiltwithroomdatabase.utils.Constants.BUNDLE
 import javax.inject.Inject
 
 class NoteAdapter @Inject constructor() : RecyclerView.Adapter<NoteAdapter.ViewHolder>() {
@@ -39,7 +40,7 @@ class NoteAdapter @Inject constructor() : RecyclerView.Adapter<NoteAdapter.ViewH
                 tvDesc.text = item.noteDesc
                 root.setOnClickListener {
                     val intent = Intent(context, UpdateNoteActivity::class.java)
-                    intent.putExtra("NOTE_ID", item.noteId)
+                    intent.putExtra(BUNDLE, item.noteId)
                     context.startActivity(intent)
                 }
             }
