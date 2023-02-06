@@ -21,9 +21,6 @@ class UpdateNoteActivity : AppCompatActivity() {
     @Inject
     lateinit var noteEntity: NoteEntity
 
-    @Inject
-    lateinit var noteAdapter: NoteAdapter
-
     private var noteId = 0
     private var defaultTitle = ""
     private var defaultDesc = ""
